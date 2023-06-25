@@ -1,0 +1,39 @@
+.mainpageContainer {
+  position: relative;
+  display: flex;
+  column-gap: 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.cartPageContainer {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.moviesList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+
+.ticketsTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.emptyCart {
+  height: 100%;
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

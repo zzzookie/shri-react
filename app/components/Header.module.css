@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background-color: #333333;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+}
+
+.headerLogo {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.cartBlock {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cartCounter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  min-width: 28px;
+  min-height: 28px;
+  padding: 4px;
+  border-radius: 8px;
+
+  background-color: var(--orange);
+  color: var(--white);
+  
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}

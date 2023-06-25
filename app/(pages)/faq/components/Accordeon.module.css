@@ -1,0 +1,45 @@
+.accordeon {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.acCardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: 3rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.openAccCardButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  border: 0;
+  background-color: transparent;
+  transform: rotate(180deg);
+  transition: transform 0.25s;
+  &.opened {
+    transform: rotate(360deg);
+    transition: transform 0.25s;
+  }
+}
+
+.acCardDescription {
+  height: 0;
+  opacity: 0;
+  margin-top: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: margin-top 0.3s, height 0.5s, opacity 0.5s;
+  
+  &.opened {
+    height: auto;
+    opacity: 1;
+    margin-top: 1rem;
+    visibility: visible;
+    transform: translateY(0px);
+    transition: all 0.5s;
+  }
+}

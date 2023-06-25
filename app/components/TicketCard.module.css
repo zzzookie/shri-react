@@ -1,0 +1,55 @@
+.poster {
+  min-width: 80px;
+  max-width: 100px;
+  height: 120px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardImage {
+  object-fit: contain;
+  filter: blur(0.5rem);
+}
+
+.unblur {
+  filter: blur(0);
+  transition: filter 0.3s;
+}
+
+.container {
+  display: flex;
+  column-gap: 1.5rem;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  column-gap: 1.5rem;
+  width: 100%;
+  /* flex: 1 0 auto; */
+}
+
+.info {
+  row-gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.genre {
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  align-items: start;
+  flex: 0 0 auto;
+  gap: 1.5rem;
+
+  /* position: absolute; */
+  top: 0px;
+  right: 0px;
+}

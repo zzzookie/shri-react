@@ -1,0 +1,108 @@
+.wrapper {
+  position: sticky;
+  top: 6rem;
+  z-index: 9;
+
+  row-gap: 1.25rem;
+  min-width: 15rem;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.inputBlock {
+  font-family: 'SF Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.inputTitle,
+.select {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.textInput,
+.select {
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 10px 16px;
+  border-radius: 0.5rem;
+  border-color: var(--input-border);
+  border-width: 1px;
+  border-style: solid;
+  outline: 0;
+}
+
+.select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectWrapper::after {
+  content: " ";
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: calc(50% - 20px / 2);
+  right: 1rem;
+
+  background-color: var(--text-tertiary);
+  background-size: 20px 20px;
+  -webkit-mask: url('/icons/accordeonOpener.svg') no-repeat center;
+  mask: url('/icons/accordeonOpener.svg') no-repeat center;
+  mask-size: 20px 20px;
+
+  transform: rotate(180deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.selectWrapper.isOpened::after {
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.textInput:focus,
+.select:focus {
+  border-color: var(--orange);
+}
+
+.textInput::placeholder,
+.select:invalid:required {
+  color: var(--text-tertiary);
+}
+
+.selectRenderContainer {
+  width: 100%;
+  position: relative;
+}
+
+.optionsList {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 5;
+}
+
+.optionItem {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
