@@ -76,25 +76,3 @@
   top: 1.5rem;
   right: 1.5rem;
 }
-
-.deleteButton {
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  line-height: 1px;
-  font-size: 1px;
-  padding: 4px;
-  min-height: 1px;
-  border-radius: 4px;
-  border: 0;
-  background-color: transparent;
-}
-
-.deleteButtonIcon {
-  width: 12px;
-  height: 12px;
-  background-color: #333;
-  -webkit-mask: url('/icons/close.svg') no-repeat center;
-  mask: url('/icons/close.svg') no-repeat center;
-}
