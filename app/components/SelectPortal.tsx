@@ -19,8 +19,10 @@ export default function SelectPortal({ name, options, defaultOption, updateFilte
     if (!ref.current) return
     if (target?.dataset.value !== ref.current.value && target.dataset.value) {
       ref.current.value = target.dataset.value
-      updateFilter(ref.current)
+    } else if (target.dataset.value === "") {
+      ref.current.value = ""
     }
+    updateFilter(ref.current)
     setIsOpen(false)
   }
 
@@ -33,7 +35,6 @@ export default function SelectPortal({ name, options, defaultOption, updateFilte
     <div onClick={handleOpen} className={styles.selectWrapper} ref={containerRef}>
       <select ref={ref} name={name} className={styles.select} defaultValue={''} required>
         <option value="" disabled hidden>{defaultOption}</option>
-        <option value="" hidden>Не выбран</option>
         {options.length > 0 && options.map(option => (
           <option key={option.value} value={option.value} hidden>{option.title}</option>
         ))}
